@@ -77,32 +77,32 @@ function tsScrollDh(i)
 }
 
 
-function tsScrollResize()
-{
-   var maxWidth=320;
-   var maxHeight=320;
-
-   var myimg = FimgS();
-
-	var imgNew = new Image();
-	// imgNew.src = myimg.src;
-
-	//将myimg存起来，相当于一个参数，不然异步的时候执行太快，一直是最后一张图
-	imgNew.preImg=myimg;
-
-
-	//这个是为了防遨游等浏览器，图片宽、高加为0执行
-	if (imgNew.width == 0 || imgNew.height == 0) {
-			imgNew.onload=function(){
-				tsScrollResizeHd(this,maxWidth,maxHeight,this.preImg);
-			};
-	}
-	else
-	{
-		tsScrollResizeHd(imgNew,maxWidth,maxHeight,myimg);
-	}
-
-}
+// function tsScrollResize()
+// {
+//    var maxWidth=320;
+//    var maxHeight=320;
+//
+//    var myimg = FimgS();
+//
+// 	var imgNew = new Image();
+// 	imgNew.src = myimg.src;
+//
+// 	//将myimg存起来，相当于一个参数，不然异步的时候执行太快，一直是最后一张图
+// 	imgNew.preImg=myimg;
+//
+//
+// 	//这个是为了防遨游等浏览器，图片宽、高加为0执行
+// 	if (imgNew.width == 0 || imgNew.height == 0) {
+// 			imgNew.onload=function(){
+// 				tsScrollResizeHd(this,maxWidth,maxHeight,this.preImg);
+// 			};
+// 	}
+// 	else
+// 	{
+// 		tsScrollResizeHd(imgNew,maxWidth,maxHeight,myimg);
+// 	}
+//
+// }
 
 function tsScrollResizeHd(imgNew,maxWidth,maxHeight,myimg)
 {
@@ -186,20 +186,20 @@ function FulS()
 	return document.getElementById("tsImgSCon").getElementsByTagName("li");
 }
 //查找最大的图
-function FimgS(){
-	// return document.getElementById("tsImgS").getElementsByTagName("img")[0];
-}
-//查找Ul对象
-function FulSs()
-{
-	// return document.getElementById("tsImgSCon").getElementsByTagName("ul")[0];
-}
+// function FimgS(){
+// 	return document.getElementById("tsImgS").getElementsByTagName("img")[0];
+// }
+// //查找Ul对象
+// function FulSs()
+// {
+// 	return document.getElementById("tsImgSCon").getElementsByTagName("ul")[0];
+// }
 
-//图片集外面的DIV宽
+// //图片集外面的DIV宽
 // document.getElementById("tsImgSCon").style.width=FliS(0).offsetWidth*4+"px";
 
-//Ul宽
+// //Ul宽
 // FulSs().style.width=FliS(0).offsetWidth*FulS().length+"px";
 
 //图片等比例
-tsScrollResize();
+// tsScrollResize();

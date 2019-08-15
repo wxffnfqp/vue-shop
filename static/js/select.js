@@ -3,7 +3,7 @@ var jq = jQuery.noConflict();
 jq.fn.extend({
 	jselect:function(){
 		return jq(this).each(function(){
-			var width = this.style.width;//因为ff取不到auto
+			var width = this.style.width;//锟斤拷为ff取锟斤拷锟斤拷auto
 			jq(this).after("<input type=\"hidden\" /><div class='jslct'><div class='jslct_t'><em></em></div><dl></dl></div>");
 			var ipt = jq(this).next("input");
 			var lst = ipt.next("div");
@@ -53,10 +53,10 @@ jq.fn.extend({
 					jq(".jslct dl").hide();
 					jq(".jslct").css("z-index","0")
 			};
-		});	
-	}						
+		});
+	}
 });
- 
+
 jq(function(){
 	jq(".jj").jselect();
 });
