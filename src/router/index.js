@@ -1,9 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import HelloWorld from '@/components/HelloWorld'
 import Index from '@/components/Index'    //首页
 import Login from '@/components/Login'    //登录页面
-import Test from '@/components/Test'    //测试用的页面
 import Member from '@/components/Member'    //个人中心
 import Goods from '@/components/Goods'    //商品添加购物车
 import Shop_car from "../components/Shop_car";   //购物车第一步
@@ -27,7 +25,6 @@ export default new Router({
     },
     {path: '/goods', name: 'goods', component: Goods},
     {path:'/login',component:Login},
-    {path:'/test',component:Test},
     {
       path: '/member',
       name: 'member',
