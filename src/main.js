@@ -7,7 +7,7 @@ import router from './router'
 
 Vue.config.productionTip = false
 //配置全局域名
-Vue.prototype.url = "http://laravel.1221y.com/api/"
+Vue.prototype.url = "https://laravel.1221y.com/api/"
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
